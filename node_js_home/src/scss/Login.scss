@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: sans-serif;
+}
+
+.login {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(to top right, #75c1ff 20%, #2d88ff 80%);
+}
+
+.container {
+    position: relative;
+    width: 400px;
+    background: white;
+    padding: 60px 40px;
+}
+
+header {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 60px;
+    font-family: sans-serif;
+}
+
+.input-field,
+form .button {
+    margin-bottom: 5px;
+    margin-top: 10px;
+    position: relative;
+    height: 40px;
+    width: 100%;
+}
+
+.input-field input {
+    height: 100%;
+    width: 100%;
+    border: 1px solid silver;
+    padding-left: 15px;
+    outline: none;
+    font-size: 14px;
+    transition: .4s;
+}
+
+input:focus {
+    border: 1px solid #1DA1F2;
+}
+
+input:focus+label {
+    transform: translateY(-33px);
+    background: white;
+    font-size: 14px;
+    color: #1DA1F2;
+}
+
+.input-field label,
+span.show {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.input-field label {
+    left: 15px;
+    pointer-events: none;
+    color: grey;
+    font-size: 14px;
+    transition: .4s;
+}
+
+span.show {
+    right: 20px;
+    color: #111;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    visibility: hidden;
+}
+
+form .button {
+    margin-top: 30px;
+    overflow: hidden;
+    z-index: 111;
+}
+
+.button .inner {
+    position: absolute;
+    height: 100%;
+    width: 300%;
+    left: -100%;
+    z-index: -1;
+    transition: all .4s;
+    background: -webkit-linear-gradient(right, #00dbde, #036cf5, #00dbde, #036cf5);
+}
+
+.button:hover .inner {
+    left: 0;
+}
+
+.button button {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: none;
+    outline: none;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+
+.container .auth {
+    margin: 35px 0 20px 0;
+    font-size: 14px;
+    color: grey;
+}
+
+.required {
+    color: #ff0000;
+    padding: 0;
+    margin: 5px 0;
+}

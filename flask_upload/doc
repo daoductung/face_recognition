@@ -1,0 +1,4 @@
+b1. Thêm dữ liệu người cần nhận diện vào data có định dạng như sau data_img/name/hinh_anh.jpg
+b2. run file face_detect_and_save.py
+b3. train_main.py
+b4. face_image.py
